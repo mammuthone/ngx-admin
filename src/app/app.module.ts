@@ -15,6 +15,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { ThemeModule } from './@theme/theme.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+
+//* FIREBASE *//
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -22,6 +30,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireAuthModule,
 
     NgbModule.forRoot(),
     ThemeModule.forRoot(),

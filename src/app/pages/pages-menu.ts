@@ -1,17 +1,47 @@
 import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
+  
+  {
+    title: 'I Ristoranti',
+    icon: 'fas fa-utensils',
+    children: [
+      {
+        title: 'Calendar',
+        link: '/pages/extra-components/calendar',
+      },
+      {
+        title: 'Stepper',
+        link: '/pages/extra-components/stepper',
+      },
+      {
+        title: 'List',
+        link: '/pages/extra-components/list',
+      },
+      {
+        title: 'Infinite List',
+        link: '/pages/extra-components/infinite-list',
+      },
+      {
+        title: 'Form Inputs',
+        link: '/pages/extra-components/form-inputs',
+      },
+      {
+        title: 'Accordion',
+        link: '/pages/extra-components/accordion',
+      },
+      {
+        title: 'Progress Bar',
+        link: '/pages/extra-components/progress-bar',
+      }]
+  },
   {
     title: 'E-commerce',
     icon: 'nb-e-commerce',
     link: '/pages/dashboard',
     home: true,
   },
-  {
-    title: 'IoT Dashboard',
-    icon: 'nb-home',
-    link: '/pages/iot-dashboard',
-  },
+  
   {
     title: 'FEATURES',
     group: true,

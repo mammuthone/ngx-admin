@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 
 import { MENU_ITEMS } from './pages-menu';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { NbMenuItem } from '@nebular/theme';
 
 @Component({
   selector: 'ngx-pages',
@@ -14,5 +16,24 @@ import { MENU_ITEMS } from './pages-menu';
 })
 export class PagesComponent {
 
-  menu = MENU_ITEMS;
+  menu = {}
+
+  $locali: AngularFirestoreCollection<any[]>;
+  locale: NbMenuItem;
+
+  constructor(private afs: AngularFirestore) {
+
+  }
+
+  ngOnInit() {
+    var $locali = this.afs.collection('locali').valueChanges();
+    $locali.subscribe(res => {
+
+      const list = res.map(e => { return { title: e['nome'] } })
+
+      console.log(list)
+      this.menu = MENU_ITEMS;
+    });
+  }
+
 }

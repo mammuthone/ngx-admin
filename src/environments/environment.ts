@@ -10,4 +10,13 @@
 
 export const environment = {
   production: false,
+  firebase : {
+    apiKey: "AIzaSyBYexVjILelyLVo6L3VLWt86FNfq_Q2KiQ",
+    authDomain: "realmenu-454e9.firebaseapp.com",
+    databaseURL: "https://realmenu-454e9.firebaseio.com",
+    projectId: "realmenu-454e9",
+    storageBucket: "realmenu-454e9.appspot.com",
+    messagingSenderId: "52109076590",
+    appId: "1:52109076590:web:9f78aa1bdf797f58"
+  }
 };
